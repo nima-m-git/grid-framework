@@ -1,27 +1,30 @@
 @import 'reset';
 
-$row-margin: 5vw; /*change on media queries */
-$gap-width: (100vw - ($row-margin * 2)) / 47;
-$col-width: ((100vw - ($row-margin * 2)) / 47) * 3;
+$row-padding: 5vw; /*change on media queries */
+$col-width: ((100vw - ($row-padding * 2)) / 47) * 3;
+$gutter-width: (100vw - ($row-padding * 2)) / 47;
+$col-margin: $gutter-width / 2;
+
 
 @mixin grid-unit($span) {
-    float: left;
-    margin-right: $gap-width;
-    width: (($col-width + $gap-width) * $span);
+    margin: 0 $col-margin;
+    width: (($col-width + $col-margin) * $span);
 }
+
 
 .row {
     width: 100vw;
-    margin: 0 $row-margin;
+    padding: 0 $row-padding;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     @for $i from 1 through 12 {
         .col-#{$i} {
-            @include grid-unit($i)
+            @include grid-unit($i);
         }
     }
-
 }
-
 
 
 @media (min-width: 481px) and (max-width: 768px) {

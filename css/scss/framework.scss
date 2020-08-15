@@ -7,7 +7,7 @@ $col-width: ((100vw - ($row-margin * 2)) / 47) * 3;
 @mixin grid-unit($span) {
     float: left;
     margin-right: $gap-width;
-    width: ($col-width * $span) + ($gap-width * ($span -1));
+    width: (($col-width + $gap-width) * $span);
 }
 
 .row {

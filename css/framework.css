@@ -1,0 +1,18 @@
+/* Error: Undefined operation "1.914893617vw * 1 -1".
+ *    ,
+ * 10 |     width: ($col-width * $span) + ($gap-width * ($span -1));
+ *    |                                    ^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss/framework.scss 10:36  grid-unit()
+ *   scss/framework.scss 19:13  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined operation "1.914893617vw * 1 -1".\a    \2577 \a 10 \2502      width: ($col-width * $span) + ($gap-width * ($span -1));\a    \2502                                     ^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/framework.scss 10:36  grid-unit()\a   scss/framework.scss 19:13  root stylesheet';
+}

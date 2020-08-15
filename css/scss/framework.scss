@@ -1,0 +1,65 @@
+@import 'reset';
+
+$row-margin: 5vw; /*change on media queries */
+$gap-width: (100vw - ($row-margin * 2)) / 47;
+$col-width: ((100vw - ($row-margin * 2)) / 47) * 3;
+
+@mixin grid-unit($span) {
+    float: left;
+    margin-right: $gap-width;
+    width: ($col-width * $span) + ($gap-width * ($span -1));
+}
+
+.row {
+    width: 100vw;
+    margin: 0 $row-margin;
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            @include grid-unit($i)
+        }
+    }
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .row {
+        @for $i from 1 through 12 {
+            .col-sm-#{$i} {
+                @include grid-unit($i)
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .row {
+        @for $i from 1 through 12 {
+            .col-md-#{$i} {
+                @include grid-unit($i)
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .row {
+        @for $i from 1 through 12 {
+            .col-lg-#{$i} {
+                @include grid-unit($i)
+            }
+        }
+    }
+}
+
+@media (max-width: 1201px) {
+    .row {
+        @for $i from 1 through 12 {
+            .col-xl-#{$i} {
+                @include grid-unit($i)
+            }
+        }
+    }
+}

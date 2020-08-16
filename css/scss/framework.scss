@@ -1,8 +1,8 @@
 @import 'reset';
 
-$row-padding: 5vw; /*change on media queries */
-$col-width: ((100vw - ($row-padding * 2)) / 47) * 3;
-$gutter-width: (100vw - ($row-padding * 2)) / 47;
+$row-padding: 2vw; /*change on media queries */
+$col-width: ((100% - ($row-padding * 2)) / 47) * 3;
+$gutter-width: (100% - ($row-padding * 2)) / 47;
 $col-margin: $gutter-width / 2;
 
 

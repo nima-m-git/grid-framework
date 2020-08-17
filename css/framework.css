@@ -457,6 +457,10 @@ a {
   flex-direction: column;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -467,6 +471,10 @@ a {
 
 .space-btwn {
   justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=framework.css.map */

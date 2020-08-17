@@ -112,6 +112,10 @@ $displays: block, inline, inline-block, flex, none;
     flex-direction: column;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -122,4 +126,8 @@ $displays: block, inline, inline-block, flex, none;
 
 .space-btwn {
     justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
 }
